@@ -24,6 +24,19 @@ const deezerReducer = (state = {artists: []}, action) => {
             : undefined,
       };
     }
+    case actionType.GET_TRACK_LIST : {
+      return {
+        ...state,
+        gettingTrackList: true,
+      };
+    }
+    case actionType.TRACK_LIST_RESULT : {
+      return {
+        ...state,
+        gettingTrackList: false,
+        trackList: action.data,
+      };
+    }
 
     default :
       return state;

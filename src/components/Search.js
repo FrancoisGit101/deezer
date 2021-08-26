@@ -22,8 +22,10 @@ const Search = () => {
   const [criteria, setCriteria] = React.useState('');
 
   const onSearchClicked = React.useCallback(() => {
-    searchArtists_(criteria);
-  }, [criteria, searchArtists_]);
+    selectArtist_(undefined).then(()=> {
+      searchArtists_(criteria);
+    });
+  }, [criteria, searchArtists_, selectArtist_]);
 
   const handleCriteriaChange = React.useCallback((event) => {
     setCriteria(event.target.value)
@@ -35,7 +37,7 @@ const Search = () => {
         searchArtists_(criteria);
       });
     }
-  });
+  }, [criteria, searchArtists_, selectArtist_]);
 
   return (
       <React.Fragment>

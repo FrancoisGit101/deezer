@@ -23,8 +23,6 @@ const Artists = () => {
         artistSelected: state.deezerReducer.selected,
       }));
 
-  console.log('artistSelected', artistSelected)
-
   return (
       <div className={classes.root}>
         <Grid
