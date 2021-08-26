@@ -5,7 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import ArtistDetail from "./ArtistDetail";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     paddingTop: 10,
     backgroundColor: ''

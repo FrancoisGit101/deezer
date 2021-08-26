@@ -32,7 +32,7 @@ const Search = () => {
   });
 
   const handleOnKeyPress =  React.useCallback((event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && criteria!=='') {
       selectArtist_(undefined).then(()=> {
         searchArtists_(criteria);
       });
@@ -46,7 +46,7 @@ const Search = () => {
               type="submit"
               aria-label="search"
               onClick={onSearchClicked}
-              disabled={searching}
+              disabled={searching||criteria===''}
           >
             <SearchIcon />
           </IconButton>

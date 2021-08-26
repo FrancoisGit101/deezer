@@ -2,11 +2,10 @@ import React from 'react';
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import {makeStyles} from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import {useDispatch} from "react-redux";
-import {searchArtists, selectArtist} from "../actions";
+import {selectArtist} from "../actions";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     height: 400,
     width: 250,
